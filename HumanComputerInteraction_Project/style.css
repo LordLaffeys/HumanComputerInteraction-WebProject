@@ -1,0 +1,477 @@
+/* general styling */
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #101314;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow-x: hidden;
+    color: white;
+}
+
+.content {
+    max-width: 70%;
+    margin: auto;
+}
+
+button {
+    background-color: #46C34C; 
+    border: none;
+    color: white;
+    padding: 12px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: #35933a; /* Green */
+    color: white;
+}
+
+/* nav bar styling */
+nav li, nav a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.navigate_links {
+    list-style: none;
+}
+
+.navigate_links li {
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+/* header styling */
+.header_row {
+    display: flex;
+    justify-content: space-between; /* Adjust as needed */
+    align-items: center;
+}
+
+.header_column {
+    text-align: left;
+    font-size: 32px;
+}
+
+.header_column .join_now {
+    font-size: 30px;
+}
+/* product styling */
+.product {
+    margin-top: 10%;
+}
+
+.product h2 {
+    text-align: center;
+}
+
+.product_row {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.product_column {
+    text-align: left;
+    font-size: 16px;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    padding: 1% 0;
+    margin: 3%;
+}
+
+/* FAQ styling */
+.FAQ {
+    margin-top: 10%;
+}
+
+.FAQ h2 {
+    text-align: center;
+}
+
+.FAQ_accordion li {
+    list-style-type: none;
+
+}
+
+.FAQ_accordion li label {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    color: #46C34C;
+}
+
+.FAQ_accordion label::before {
+    content: '+';
+    color: #FFBC00;
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+.FAQ_accordion input[type="radio"] {
+    display: none;
+}
+
+.FAQ_accordion .FAQ_answer {
+    padding: 0 10px;
+    line-height: 22px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+.FAQ_accordion input[type='radio']:checked + label + .FAQ_answer {
+    max-height: 400px;
+    background-color: #2D2E2F;
+    border-radius: 10px;
+    padding: 1% 20px;
+    font-size: 16px;
+}
+
+.FAQ_accordion input[type='radio']:checked + label::before {
+    content: '-';
+}
+
+/* Footer Styling */
+footer {
+    border-top: 2px solid white;
+    text-align: center;
+}
+
+.footer_socialmedia {
+    display: flex;
+    justify-content: center; /* Adjust as needed */
+    align-items: center;
+}
+
+.footer_socialmedia img {
+    width: 36px;
+    height: auto;
+    padding: 10px;
+}
+
+/* Product Showcase Styling */
+ /* Style the tab */
+.product_tab {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+  
+/* Style the buttons that are used to open the tab content */
+.product_tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    border-radius: 0px;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+  
+/* Create an active/current tablink class */
+.product_tab button.active {
+    border-bottom: 2px solid #46C34C;
+    color: #46C34C;
+}
+  
+/* Style the tab content */
+.product_grid_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product_grid_item {
+    flex: 0 0 calc(33.33% - 20px); /* Adjust the width of each item as needed */
+    margin: 5px 0;
+    height: 250px; /* Adjust the height of each item as needed */
+    border: 2px white solid;
+    color: #fff;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* text-align: center; */
+}
+
+.product_showcase {
+    margin-bottom: 100px;
+}
+
+.product_grid_item img {
+    border-radius: 50%;
+    width: 50px;
+    margin: 20px;
+}
+
+.product_grid_item_header {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.product_grid_item_description {
+    margin: 0 20px;
+}
+
+.product_grid_item_ticker {
+    display: flex;
+    border-top: 2px grey solid;
+    justify-content: space-between;
+    padding: 10px 0px;
+}
+
+.product_grid_item_ticker p {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+
+.product_grid_item_ticker h4 {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+
+.product_grid_item:hover {
+    transform: scale(1.05); /* Scale up the div on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a shadow effect on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.dashboard-header .timebased-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    border-bottom: 2px white solid;
+}
+
+.dashboard-header {
+    border: 0 0 2px 0 white solid;
+}
+
+/* Style the buttons */
+.time-selector .btn {
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    background-color: #101314;
+    cursor: pointer;
+}
+  
+.time-selector .btn:hover {
+    background-color: #202527;
+}
+
+/* Style the active class (and buttons on mouse-over) */
+.time-selector .active {
+    background-color: #35933a;
+    color: white;
+}
+
+.PNL-analysis {
+    display: flex;
+}
+
+.left-analysis {
+    width: 50%;
+    float: left;
+}
+
+.right-analysis {
+    width: 50%;
+    float: left;
+}
+
+.PNL-analysis .line {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 32px;
+    margin: 0;
+}
+
+.login-form {
+    width: 360px;
+    margin: 125px auto;
+    color: white;
+}
+
+.login-form h2, .login-form p, .login-form button {
+    text-align: center;
+}
+
+.login-form input {
+    display: block;
+}
+
+.login-form label::before { 
+    content: '';
+    padding: 0;
+    margin: 0;
+}
+
+.login-form label::after { 
+    content: '';
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 15px; /* Adjust padding as needed */
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  font-size: 16px; /* Set font size */
+  border-radius: 5px; /* Add rounded corners */
+  background-color: white;
+}
+
+.login-form input[type="text"]::placeholder,
+.login-form input[type="password"]::placeholder {
+  color: #aaa; /* Change placeholder text color */
+}
+
+.login-form .rememberme {
+    display: flex;
+    justify-content: space-between; /* Aligns elements horizontally */
+    align-items: center; /* Aligns elements vertically */
+}
+
+.login-form .rememberme input[type='checkbox'] {
+    display: inline;
+}   
+
+.login-form .login-button, .login-form .register-button {
+    margin-top: 32px;
+    width: 100%;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    background-color: #131823;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.30) 0px 6px 6px;
+    z-index: 999;
+}
+
+.popup .spliting {
+    display: flex;
+    width: 900px;
+    height: 720px;
+}
+
+.popup .spliting .left-popup {
+    width: 600px;
+    overflow-y: scroll;
+}
+
+.popup .spliting .right-popup {
+    width: 300px;
+    border-left: 2px solid white;
+    padding-left: 16px;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    background: none;
+}
+  
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.transaction-form input[type="number"] {
+  width: 100%;
+  padding: 15px; /* Adjust padding as needed */
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  font-size: 16px; /* Set font size */
+  border-radius: 5px; /* Add rounded corners */
+  background-color: white;
+}
+
+.transaction-form .form-button {
+    display: flex;
+}
+
+.transaction-form .form-button button {
+    width: 50%;
+}
+
+.transaction-form .form-button .buy-button {
+    margin-right: 6px;
+}
+
+.transaction-form .form-button .sell-button {
+    margin-left: 6px;
+    background-color: rgb(223, 64, 64);
+}
+
+.transaction-form .form-button .sell-button:hover {
+    background-color: salmon;
+}
+
+.right-popup .right-popup-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.right-popup .right-popup-header button {
+    background-color: transparent;
+}
+
+.dashboard-chart {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+
+.dashboard-chart .chart-container {
+    width: 50%; /* Set width for each chart container */
+    height: auto; /* Set a fixed height */
+    margin: 0 2.5%; /* Add some margin between the charts */
+    display: inline-block; /* Display containers inline */
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.positive {
+    color: #46C34C;
+}
+.negative {
+    color: red;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">    
+    <title>TrustVenture</title>
+</head>
+<body>
+    <div class="content">
+        <!-- Nav Bar -->
+        <nav>
+            <h1>TrustVenture</h1>
+        <nav>
+            <ul class="navigate_links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="product.html">Product</a></li>
+                <li><a id="dashboard-link" href="dashboard.html">Dashboard</a></li>
+            </ul>
+        </nav>
+        <ul class="navigate_links">
+            <li id="login-link"><a href="login.html">Login</a></li>
+            <li id="register-link"><a class="signin" href="register.html"> 
+                <button>Register</button> 
+            </a></li>
+            <li id="logout-link" style="display: none;"><a href="#" onclick="logout()"><button>Log out</button></a></li>
+        </ul>
+        </nav>
+
+        <!-- Header Content -->
+        <div class="header_row">
+            <div class="header_column">
+                <h1 style="color: #46C34C;">MADE INVEST EASY <br>FOR EVERYONE</h1>
+                <P>Let Money Work for Your Future</P>
+                <button class="join_now">Join Now</button>
+            </div>
+            <div class="header_column">
+                <img src="..\resource\HeaderCoin.png" alt="">
+            </div>
+        </div> 
+        <!-- Products -->
+        <div class="product">
+            <h2>START YOUR INVESTING JOURNEY WITH US</h2>
+            <div class="product_row">
+                <div class="product_column">
+                    <h1 style="color: #46C34C;">Crypto</h1>
+                    <P>Ignite your financial journey in the cutting-edge realm of secure cryptocurrency investments. Seize digital opportunities that redefine the future of wealth creation – where innovation meets prosperity.</P>
+                </div>
+                <div class="product_column">
+                    <h1 style="color: #46C34C;">Stocks</h1>
+                    <P>Unleash the power of dynamic portfolios! Dive into a world of diverse stocks meticulously chosen for maximum growth and unwavering stability. Elevate your investments and ride the wave of financial success.</P>
+                </div>
+                <div class="product_column">
+                    <h1 style="color: #46C34C;">Commodities</h1>
+                    <P>Embark on a journey of financial resilience with commodities – the robust foundation for diversified portfolios! Navigate through market fluctuations with the strength of tangible assets. explore the diversification</P>
+                </div>
+            </div> 
+        </div>  
+        <!-- FAQ -->
+        <div class="FAQ">
+            <h2>Frequently Asked Questions</h2>
+            <ul class="FAQ_accordion">
+                <li>
+                    <input type="radio" name="FAQ_accordion" id="first" checked>
+                    <label for="first"><b>What is TrustVenture?</b></label>
+                    <div class="FAQ_answer">
+                        <p>TrustVenture is not just an investment platform; it's your financial partner on the journey to prosperity. We are a pioneering financial investment startup committed to delivering innovative solutions, personalized strategies, and a trusted pathway to financial success. With TrustVenture, you're not just investing; you're forging a lasting partnership built on trust, transparency, and transformative financial experiences</p>
+                    </div>
+                </li>
+
+                <li>
+                    <input type="radio" name="FAQ_accordion" id="second">
+                    <label for="second"><b>Why Choose Us?</b></label>
+                    <div class="FAQ_answer">
+                        <p>Choose TrustVenture for a seamless blend of expertise, innovation, and client-centric services. Our team comprises seasoned financial professionals dedicated to navigating the complexities of the market on your behalf. We offer tailor-made investment solutions, cutting-edge technology, and a commitment to transparency. Your financial goals are our priority, and at TrustVenture, we stand as your reliable companion in every step towards financial prosperity.</p>
+                    </div>
+                </li>
+
+                <li>
+                    <input type="radio" name="FAQ_accordion" id="third">
+                    <label for="third"><b>Are My Money Safe?</b></label>
+                    <div class="FAQ_answer">
+                        <P>Absolutely. TrustVenture prioritizes the security and well-being of your investments. We implement robust security measures, utilizing state-of-the-art technology to safeguard your funds. Our commitment to regulatory compliance and industry best practices ensures that your investments are not only secure but also poised for growth in a stable environment.</P>
+                    </div>
+                </li>
+
+                <li>
+                    <input type="radio" name="FAQ_accordion" id="fourth">
+                    <label for="fourth"><b>what is TrustVenture advantages?</b></label>
+                    <div class="FAQ_answer">
+                        <p>Innovative Solutions: TrustVenture thrives on innovation, bringing you cutting-edge investment solutions tailored to meet your unique financial objectives. <br><br>
+                            Personalized Strategies: We recognize that every investor is unique. TrustVenture crafts personalized investment strategies, aligning with your goals, risk tolerance, and timeline. <br><br>
+                            Transparency: TrustVenture believes in open communication. We provide transparent, real-time insights into your investments, ensuring you're well-informed and in control.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <div class="footer_logo">
+                <h1>TrustVenture</h1>
+            </div>
+            <div class="footer_socialmedia">
+                <img src="resource/ins.png" alt="">
+                <img src="resource/discord.png" alt="">
+                <img src="resource/x.png" alt="">
+            </div>
+            <div class="footer_copyright">
+                <p>© 2024 TrustVentures. All Rights Reserved</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="common.js"></script>
+    <script src="home.js"></script>
+</body>
+</html>

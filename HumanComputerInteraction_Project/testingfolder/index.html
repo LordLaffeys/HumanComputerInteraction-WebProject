@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asset Allocation Pie Chart</title>
+    <!-- Include Google Charts API -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <style>
+        .chart-container {
+            width: 500px; /* Adjust width as needed */
+            height: 300px; /* Set a fixed height */
+            margin: 0 auto; /* Center the container horizontally */
+            border: 1px solid #ccc; /* Optional border for visualization */
+        }
+    </style>
+</head>
+<body>
+    <!-- Container div for the chart -->
+    <div class="chart-container" id="chart_div"></div>
+
+    <!-- JavaScript code for generating the pie chart -->
+    <script>
+        const balanceUsdt = 10000; // Example balance in USDT
+
+        // Your JavaScript code for calculating asset allocation and creating the chart goes here
+        const simulationData = [
+            {
+                timestamp: new Date('2024-05-26T08:00:00'),
+                ticker: 'SOL',
+                price: 150,
+                quantity: 2,
+                total: 300,
+            },
+            {
+                timestamp: new Date('2024-05-27T09:30:00'),
+                ticker: 'XRP',
+                price: 1.5,
+                quantity: 100,
+                total: 150,
+            },
+            {
+                timestamp: new Date('2024-05-28T10:45:00'),
+                ticker: 'BTC',
+                price: 40000,
+                quantity: 0.5,
+                total: 20000,
+            },
+            {
+                timestamp: new Date('2024-05-29T11:15:00'),
+                ticker: 'ETH',
+                price: 2500,
+                quantity: 1,
+                total: 2500,
+            },
+            {
+                timestamp: new Date('2024-05-30T12:30:00'),
+                ticker: 'BNB',
+                price: 400,
+                quantity: 5,
+                total: 2000,
+            },
+            // Add more objects as needed
+        ];
+
+
+        // Calculate total value for each asset
+        const assetValues = {};
+        simulationData.forEach(transaction => {
+            const { ticker, total } = transaction;
+            if (!assetValues[ticker]) {
+                assetValues[ticker] = 0;
+            }
+            assetValues[ticker] += total;
+        });
+
+        // Prepare data for Google Charts API
+        const data = [['Asset', 'Value']];
+        for (const ticker in assetValues) {
+            if (assetValues.hasOwnProperty(ticker)) {
+                data.push([ticker, assetValues[ticker]]);
+            }
+        }
+
+        data.push(['Balance USDT', balanceUsdt]); // Include balanceUsdt in the data array
+
+        // Load Google Charts API and create pie chart
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            const dataTable = google.visualization.arrayToDataTable(data);
+            const options = {
+                title: 'Asset Allocation',
+                width: '100%', // Set chart width
+                height: '100%', // Set chart height
+            };
+            const chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+            chart.draw(dataTable, options);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">    
+    <title>TrustVenture</title>
+</head>
+<body>
+    <div class="content">
+        <!-- Nav Bar -->
+        <nav>
+            <h1>TrustVenture</h1>
+        <nav>
+            <ul class="navigate_links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="product.html">Product</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+            </ul>
+        </nav>
+        <ul class="navigate_links">
+            <li id="login-link"><a href="login.html">Login</a></li>
+            <li id="register-link"><a class="signin" href="register.html"> 
+                <button>Register</button> 
+            </a></li>
+            <li id="logout-link" style="display: none;"><a href="#" onclick="logout()"><button>Log out</button></a></li>
+        </ul>
+        </nav>
+
+        <div class="login-form">
+            <h2>Log in to Your Account</h2>
+            <p>Welcome!! Please Login to Your Account</p>
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" placeholder="Enter first name" required>
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" placeholder="Enter last name" required>
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="Enter Email" required>
+            <label for="psw">Password</label>
+            <input type="password" id="psw" name="password" placeholder="Enter Password" required>
+            <label for="pswconf">Confirm Password</label>
+            <input type="password" id="pswconf" name="passwordconf" placeholder="Reenter Password" required>
+            
+            <div class="rememberme">
+                <label class="psw">
+                    <input type="checkbox" name="rememberme" checked="checked"> agree to terms and conditions
+                </label>
+            </div>
+            <button type="submit" class="register-button">Sign in</button>
+        </div>
+
+        <!-- Footer -->
+        <div class="" style="height: 100px;"></div>
+        <footer>
+            <div class="footer_logo">
+                <h1>TrustVenture</h1>
+            </div>
+            <div class="footer_socialmedia">
+                <img src="resource/ins.png" alt="">
+                <img src="resource/discord.png" alt="">
+                <img src="resource/x.png" alt="">
+            </div>
+            <div class="footer_copyright">
+                <p>© 2024 TrustVentures. All Rights Reserved</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="common.js"></script>
+    <script src="register.js"></script>
+</body>
+</html>

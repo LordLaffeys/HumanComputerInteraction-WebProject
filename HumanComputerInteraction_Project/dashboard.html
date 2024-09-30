@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">    
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <title>TrustVenture</title>
+</head>
+<body>
+    <div class="content">
+        <!-- Nav Bar -->
+        <nav>
+            <h1>TrustVenture</h1>
+            <nav>
+                <ul class="navigate_links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                </ul>
+            </nav>
+            <ul class="navigate_links">
+                <li id="login-link"><a href="login.html">Login</a></li>
+                <li id="register-link"><a class="signin" href="register.html"> 
+                    <button>Register</button> 
+                </a></li>
+                <li id="logout-link" style="display: none;"><a href="#" onclick="logout()"><button>Log out</button></a></li>
+            </ul>
+        </nav>
+
+
+        <div class="dashboard-header">
+            <h2>Investment Account Analysis</h2>
+
+            <div class="timebased-header">
+                <div class="timebased-header-element">
+                    <h3>Today's PNL</h3>
+                    <p id="todaysPNLPercentage">0.00%</p>
+                    <p id="todaysPNLUSD">0.00 USD</p>
+                </div>
+                
+                <div class="timebased-header-element">
+                    <h3>7D PNL</h3>
+                    <p id="sevenDaysPNLPercentage">0.00%</p>
+                    <p id="sevenDaysPNLUSD">0.00 USD</p>
+                </div>
+
+                <div class="timebased-header-element">
+                    <h3>30D PNL</h3>
+                    <p id="thirtyDaysPNLPercentage">0.00%</p>
+                    <p id="thirtyDaysPNLUSD">0.00 USD</p>
+                </div>
+
+                <div class="timebased-header-element">
+                    <h3>90D PNL</h3>
+                    <p id="ninetyDaysPNLPercentage">0.00%</p>
+                    <p id="ninetyDaysPNLUSD">0.00 USD</p>
+                </div>
+            </div>
+        </div>
+
+        <h3>Profit and Loss Analysis</h3>
+        <div class="PNL-analysis">
+            
+            <div class="left-analysis">
+                <div class="line">
+                    <p>Net Profit/Loss</p>
+                    <p id="netPNLValue">0.00</p>
+                </div>
+            </div>
+            <div class="right-analysis">
+                <div class="line">
+                    <p>Profit/Loss Ratio</p>
+                    <p id="profitLossRatioValue">0.00</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-chart">
+            <div class="chart-container" id="line_chart" style="width: 100%; height: 100%;"></div>
+            <div class="chart-container" id="pie_chart" style="width: 100%; height: 100%;"></div>
+            <div class="chart-container" id="balance_chart" style="width: 100%; height: 100%;"></div>
+        </div>
+        <!-- Footer -->
+        <div class="" style="height: 100px;"></div>
+        <footer>
+            <div class="footer_logo">
+                <h1>TrustVenture</h1>
+            </div>
+            <div class="footer_socialmedia">
+                <img src="resource/ins.png" alt="">
+                <img src="resource/discord.png" alt="">
+                <img src="resource/x.png" alt="">
+            </div>
+            <div class="footer_copyright">
+                <p>© 2024 TrustVentures. All Rights Reserved</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="common.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

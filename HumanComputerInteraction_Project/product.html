@@ -1,0 +1,1593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">    
+    <title>TrustVenture</title>
+</head>
+<body>
+    <div class="content">
+        <!-- Nav Bar -->
+        <nav>
+            <h1>TrustVenture</h1>
+            <nav>
+                <ul class="navigate_links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                </ul>
+            </nav>
+            <ul class="navigate_links">
+                <li id="login-link"><a href="login.html">Login</a></li>
+                <li id="register-link"><a class="signin" href="register.html"> 
+                    <button>Register</button> 
+                </a></li>
+                <li id="logout-link" style="display: none;"><a href="#" onclick="logout()"><button>Log out</button></a></li>
+            </ul>
+        </nav>
+
+        <!-- Product Showcase -->
+        <div class="product_showcase">
+            <h2>Product Overview</h2>
+             <!-- Tab links -->
+            <div class="product_tab">
+                <button class="product_tablinks" onclick="openTab(event, 'Crypto')" id="defaultOpen">Crypto</button>
+                <button class="product_tablinks" onclick="openTab(event, 'Stocks')">Stocks</button>
+                <button class="product_tablinks" onclick="openTab(event, 'Commodities')">Commodities</button>
+            </div>
+            
+            <!-- Tab content -->
+            <div id="Crypto" class="product_tabcontent">
+                <div class="product_grid_container">
+                    <div class="product_grid_item" onclick="showPopup('popupBTC')">
+                        <div class="product_grid_item_header">
+                            <img src="/resource/bitcoin.png" alt="">
+                            <h3>BitCoin</h3>
+                        </div>
+                        <div class="product_grid_item_description">
+                            <p>Pioneer cryptocurrency, store of value, decentralized finance.</p>
+                            <div class="product_grid_item_ticker">
+                                <div>
+                                    <h4>Price</h4>
+                                    <p>XXXXX</p>
+                                </div>
+                                <div>
+                                    <h4>Volume</h4>
+                                    <p>XXXXX</p>
+                                </div>
+                                <div>
+                                    <h4>Market Cap</h4>
+                                    <p>XXXXX</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_grid_item" onclick="showPopup('popupETH')">
+                        <div class="product_grid_item_header">
+                            <img src="/resource/etherium.png" alt="">
+                            <h3>Ethereum</h3>
+                        </div>
+                        <div class="product_grid_item_description">
+                            <p>Ethereum fuels smart contracts, decentralized applications ecosystem.</p>
+                            <div class="product_grid_item_ticker">
+                                <div>
+                                    <h4>Price</h4>
+                                    <p>XXXXX</p>
+                                </div>
+                                <div>
+                                    <h4>Volume</h4>
+                                    <p>XXXXX</p>
+                                </div>
+                                <div>
+                                    <h4>Market Cap</h4>
+                                    <p>XXXXX</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_grid_item" onclick="showPopup('popupSOL')">
+                        <div class="product_grid_item_header">
+                            <img src="/resource/solana.png" alt="">
+                            <h3>Solana</h3>
+                        </div>
+                        <div class="product_grid_item_description">
+                            <p>Solana's blazing fast blockchain powers decentralized applications.</p>
+                            <div class="product_grid_item_ticker">
+                                <div>
+                                    <h4>Price</h4>
+                                    <p>XXXXX</p>
+                                </div>
+                                <div>
+                                    <h4>Volume</h4>
+                                    <p>XXXXX</p>
+                                </div>
+                                <div>
+                                    <h4>Market Cap</h4>
+                                    <p>XXXXX</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_grid_item" onclick="showPopup('popupXRP')">
+                        <div class="product_grid_item_header">
+                            <img src="/resource/rippleXRP.png" alt="">
+                            <h3>Ripple</h3>
+                        </div>
+                        <div class="product_grid_item_description">
+                            <p>Ripple's digital currency for seamless cross-border payments.</p>
+                            <div class="product_grid_item_ticker">
+                                <div>
+                                    <h4>Price</h4>
+                                    <p>XXXXX</p>
+                                </div>
+                                <div>
+                                    <h4>Volume</h4>
+                                    <p>XXXXX</p>
+                                </div>
+                                <div>
+                                    <h4>Market Cap</h4>
+                                    <p>XXXXX</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_grid_item" onclick="showPopup('popupICP')">
+                        <div class="product_grid_item_header">
+                            <img src="/resource/INTERNET PROTOCOL.png" alt="">
+                            <h3>Internet Computer</h3>
+                        </div>
+                        <div class="product_grid_item_description">
+                            <p>Decentralized web infrastructure, internet reimagined.</p>
+                            <div class="product_grid_item_ticker">
+                                <div>
+                                    <h4>Price</h4>
+                                    <p>XXXXX</p>
+                                </div>
+                                <div>
+                                    <h4>Volume</h4>
+                                    <p>XXXXX</p>
+                                </div>
+                                <div>
+                                    <h4>Market Cap</h4>
+                                    <p>XXXXX</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_grid_item" onclick="showPopup('popupBNB')">
+                        <div class="product_grid_item_header">
+                            <img src="/resource/binancecoin.png" alt="">
+                            <h3>Binance Coin</h3>
+                        </div>
+                        <div class="product_grid_item_description">
+                            <p>Binance Coin powers Binance Smart Chain transactions.</p>
+                            <div class="product_grid_item_ticker">
+                                <div>
+                                    <h4>Price</h4>
+                                    <p>XXXXX</p>
+                                </div>
+                                <div>
+                                    <h4>Volume</h4>
+                                    <p>XXXXX</p>
+                                </div>
+                                <div>
+                                    <h4>Market Cap</h4>
+                                    <p>XXXXX</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more grid items as needed -->
+                </div>
+            </div>
+
+            <div id="Stocks" class="product_tabcontent">
+                <div class="product_grid_container">
+                    <div class="product_grid_item" onclick="showPopup('popupApple')">
+                        <div class="product_grid_item_header">
+                            <img src="/resource/apple.jpeg" alt="">
+                            <h3>Apple</h3>
+                        </div>
+                        <div class="product_grid_item_description">
+                            <p>Apple's innovations shape the tech landscape.</p>
+                            <div class="product_grid_item_ticker">
+                                <div>
+                                    <h4>Price</h4>
+                                    <p>XXXXX</p>
+                                </div>
+                                <div>
+                                    <h4>Volume</h4>
+                                    <p>XXXXX</p>
+                                </div>
+                                <div>
+                                    <h4>Market Cap</h4>
+                                    <p>XXXXX</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_grid_item" onclick="showPopup('popupTesla')">
+                        <div class="product_grid_item_header">
+                            <img src="/resource/tesla.png" alt="">
+                            <h3>Tesla</h3>
+                        </div>
+                        <div class="product_grid_item_description">
+                            <p>Tesla pioneers electric vehicles and sustainable energy.</p>
+                            <div class="product_grid_item_ticker">
+                                <div>
+                                    <h4>Price</h4>
+                                    <p>XXXXX</p>
+                                </div>
+                                <div>
+                                    <h4>Volume</h4>
+                                    <p>XXXXX</p>
+                                </div>
+                                <div>
+                                    <h4>Market Cap</h4>
+                                    <p>XXXXX</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_grid_item" onclick="showPopup('popupMicrosoft')">
+                        <div class="product_grid_item_header">
+                            <img src="/resource/msft.png" alt="">
+                            <h3>Microsoft</h3>
+                        </div>
+                        <div class="product_grid_item_description">
+                            <p>Microsoft empowers with diverse software solutions.</p>
+                            <div class="product_grid_item_ticker">
+                                <div>
+                                    <h4>Price</h4>
+                                    <p>XXXXX</p>
+                                </div>
+                                <div>
+                                    <h4>Volume</h4>
+                                    <p>XXXXX</p>
+                                </div>
+                                <div>
+                                    <h4>Market Cap</h4>
+                                    <p>XXXXX</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_grid_item" onclick="showPopup('popupMicrostrategy')">
+                        <div class="product_grid_item_header">
+                            <img src="/resource/microstrat.png" alt="">
+                            <h3>MicroStrategy</h3>
+                        </div>
+                        <div class="product_grid_item_description">
+                            <p>MicroStrategy leverages analytics for strategic business decisions.</p>
+                            <div class="product_grid_item_ticker">
+                                <div>
+                                    <h4>Price</h4>
+                                    <p>XXXXX</p>
+                                </div>
+                                <div>
+                                    <h4>Volume</h4>
+                                    <p>XXXXX</p>
+                                </div>
+                                <div>
+                                    <h4>Market Cap</h4>
+                                    <p>XXXXX</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_grid_item" onclick="showPopup('popupMeta')">
+                        <div class="product_grid_item_header">
+                            <img src="/resource/meta.png" alt="">
+                            <h3>Meta</h3>
+                        </div>
+                        <div class="product_grid_item_description">
+                            <p>Meta (formerly Facebook) connects the global community.</p>
+                            <div class="product_grid_item_ticker">
+                                <div>
+                                    <h4>Price</h4>
+                                    <p>XXXXX</p>
+                                </div>
+                                <div>
+                                    <h4>Volume</h4>
+                                    <p>XXXXX</p>
+                                </div>
+                                <div>
+                                    <h4>Market Cap</h4>
+                                    <p>XXXXX</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_grid_item" onclick="showPopup('popupNvidia')">
+                        <div class="product_grid_item_header">
+                            <img src="/resource/nvidia.jpeg" alt="">
+                            <h3>Nvidia</h3>
+                        </div>
+                        <div class="product_grid_item_description">
+                            <p>NVIDIA drives graphics innovation for computing advancements.</p>
+                            <div class="product_grid_item_ticker">
+                                <div>
+                                    <h4>Price</h4>
+                                    <p>XXXXX</p>
+                                </div>
+                                <div>
+                                    <h4>Volume</h4>
+                                    <p>XXXXX</p>
+                                </div>
+                                <div>
+                                    <h4>Market Cap</h4>
+                                    <p>XXXXX</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more grid items as needed -->
+                </div>
+            </div>
+            
+            <div id="Commodities" class="product_tabcontent">
+                <div class="product_grid_container">
+                    <div class="product_grid_item" onclick="showPopup('popupGold')">
+                        <div class="product_grid_item_header">
+                            <img src="/resource/XAU.png" alt="">
+                            <h3>Gold</h3>
+                        </div>
+                        <div class="product_grid_item_description">
+                            <p>Timeless store of value, economic uncertainty hedge.</p>
+                            <div class="product_grid_item_ticker">
+                                <div>
+                                    <h4>Price</h4>
+                                    <p>XXXXX</p>
+                                </div>
+                                <div>
+                                    <h4>Volume</h4>
+                                    <p>XXXXX</p>
+                                </div>
+                                <div>
+                                    <h4>Market Cap</h4>
+                                    <p>XXXXX</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_grid_item" onclick="showPopup('popupSilver')">
+                        <div class="product_grid_item_header">
+                            <img src="/resource/silver.png" alt="">
+                            <h3>Silver</h3>
+                        </div>
+                        <div class="product_grid_item_description">
+                            <p>Precious metal with industrial applications, dual utility.</p>
+                            <div class="product_grid_item_ticker">
+                                <div>
+                                    <h4>Price</h4>
+                                    <p>XXXXX</p>
+                                </div>
+                                <div>
+                                    <h4>Volume</h4>
+                                    <p>XXXXX</p>
+                                </div>
+                                <div>
+                                    <h4>Market Cap</h4>
+                                    <p>XXXXX</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_grid_item" onclick="showPopup('popupCopper')">
+                        <div class="product_grid_item_header">
+                            <img src="/resource/copper.png" alt="">
+                            <h3>Copper</h3>
+                        </div>
+                        <div class="product_grid_item_description">
+                            <p>Bellwether for growth, vital industrial and construction.</p>
+                            <div class="product_grid_item_ticker">
+                                <div>
+                                    <h4>Price</h4>
+                                    <p>XXXXX</p>
+                                </div>
+                                <div>
+                                    <h4>Volume</h4>
+                                    <p>XXXXX</p>
+                                </div>
+                                <div>
+                                    <h4>Market Cap</h4>
+                                    <p>XXXXX</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <!-- Footer -->
+        <footer>
+            <div class="footer_logo">
+                <h1>TrustVenture</h1>
+            </div>
+            <div class="footer_socialmedia">
+                <img src="resource/ins.png" alt="">
+                <img src="resource/discord.png" alt="">
+                <img src="resource/x.png" alt="">
+            </div>
+            <div class="footer_copyright">
+                <p>© 2024 TrustVentures. All Rights Reserved</p>
+            </div>
+        </footer>
+
+        <div id="popupBTC" class="popup" data-crypto="BTC">
+            <div class="spliting">
+                <div class="left-popup">
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js" async>
+                            {
+                                "symbol": "BINANCE:BTCUSDT.P",
+                                "width": "550",
+                                "locale": "en",
+                                "colorTheme": "dark",
+                                "isTransparent": false
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+                            {
+                                "width": "550",
+                                "height": "320",
+                                "symbol": "BINANCE:BTCUSDT.P",
+                                "interval": "D",
+                                "timezone": "Etc/UTC",
+                                "theme": "dark",
+                                "style": "1",
+                                "locale": "en",
+                                "allow_symbol_change": true,
+                                "calendar": false,
+                                "support_host": "https://www.tradingview.com"
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-financials.js" async>
+                            {
+                                "isTransparent": true,
+                                "largeChartUrl": "",
+                                "displayMode": "regular",
+                                "width": "550",
+                                "height": "320",
+                                "colorTheme": "dark",
+                                "symbol": "BINANCE:BTCUSDT.P",
+                                "locale": "en"
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                </div>
+                <div class="right-popup">
+                    <div class="right-popup-header">
+                        <h1>Place Order</h1>
+                        <button onclick="closePopup('popupBTC')" class="close-popup">X</button>
+                    </div>
+                    <form id="transactionForm" class="transaction-form">
+                        <label for="price">Price:</label>
+                        <input type="number" id="price" name="price" required oninput="updateTotal()"><br><br>
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" name="quantity" required oninput="updateTotal()"><br><br>
+                        <div id="calculations">
+                            <p>Total Price: <span id="totalPrice">0</span></p>
+                            <p>Balance: <span id="balance">0.00</span></p>
+                        </div>
+                        <div class="form-button">
+                            <button class="buy-button" id="buyBtn" type="button">Buy</button>
+                            <button class="sell-button" id="sellBtn" type="button">Sell</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="popupETH" class="popup" data-crypto="ETH">
+            <div class="spliting">
+                <div class="left-popup">
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js" async>
+                            {
+                                "symbol": "BINANCE:ETHUSDT.P",
+                                "width": "550",
+                                "locale": "en",
+                                "colorTheme": "dark",
+                                "isTransparent": false
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+                            {
+                                "width": "550",
+                                "height": "320",
+                                "symbol": "BINANCE:ETHUSDT.P",
+                                "interval": "D",
+                                "timezone": "Etc/UTC",
+                                "theme": "dark",
+                                "style": "1",
+                                "locale": "en",
+                                "allow_symbol_change": true,
+                                "calendar": false,
+                                "support_host": "https://www.tradingview.com"
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-financials.js" async>
+                            {
+                                "isTransparent": true,
+                                "largeChartUrl": "",
+                                "displayMode": "regular",
+                                "width": "550",
+                                "height": "320",
+                                "colorTheme": "dark",
+                                "symbol": "BINANCE:ETHUSDT.P",
+                                "locale": "en"
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                </div>
+                <div class="right-popup">
+                    <div class="right-popup-header">
+                        <h1>Place Order</h1>
+                        <button onclick="closePopup('popupETH')" class="close-popup">X</button>
+                    </div>
+                    <form id="transactionForm" class="transaction-form">
+                        <label for="price">Price:</label>
+                        <input type="number" id="price" name="price" required oninput="updateTotal()"><br><br>
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" name="quantity" required oninput="updateTotal()"><br><br>
+                        <div id="calculations">
+                            <p>Total Price: <span id="totalPrice">0</span></p>
+                            <p>Balance: <span id="balance">0.00</span></p>
+                        </div>
+                        <div class="form-button">
+                            <button class="buy-button" id="buyBtn" type="button">Buy</button>
+                            <button class="sell-button" id="sellBtn" type="button">Sell</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="popupSOL" class="popup" data-crypto="SOL">
+            <div class="spliting">
+                <div class="left-popup">
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js" async>
+                            {
+                                "symbol": "BINANCE:SOLUSDT.P",
+                                "width": "550",
+                                "locale": "en",
+                                "colorTheme": "dark",
+                                "isTransparent": false
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+                            {
+                                "width": "550",
+                                "height": "320",
+                                "symbol": "BINANCE:SOLUSDT.P",
+                                "interval": "D",
+                                "timezone": "Etc/UTC",
+                                "theme": "dark",
+                                "style": "1",
+                                "locale": "en",
+                                "allow_symbol_change": true,
+                                "calendar": false,
+                                "support_host": "https://www.tradingview.com"
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-financials.js" async>
+                            {
+                                "isTransparent": true,
+                                "largeChartUrl": "",
+                                "displayMode": "regular",
+                                "width": "550",
+                                "height": "320",
+                                "colorTheme": "dark",
+                                "symbol": "BINANCE:SOLUSDT.P",
+                                "locale": "en"
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                </div>
+                <div class="right-popup">
+                    <div class="right-popup-header">
+                        <h1>Place Order</h1>
+                        <button onclick="closePopup('popupSOL')" class="close-popup">X</button>
+                    </div>
+                    <form id="transactionForm" class="transaction-form">
+                        <label for="price">Price:</label>
+                        <input type="number" id="price" name="price" required oninput="updateTotal()"><br><br>
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" name="quantity" required oninput="updateTotal()"><br><br>
+                        <div id="calculations">
+                            <p>Total Price: <span id="totalPrice">0</span></p>
+                            <p>Balance: <span id="balance">0.00</span></p>
+                        </div>
+                        <div class="form-button">
+                            <button class="buy-button" id="buyBtn" type="button">Buy</button>
+                            <button class="sell-button" id="sellBtn" type="button">Sell</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="popupXRP" class="popup" data-crypto="XRP">
+            <div class="spliting">
+                <div class="left-popup">
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js" async>
+                            {
+                                "symbol": "BINANCE:XRPUSDT.P",
+                                "width": "550",
+                                "locale": "en",
+                                "colorTheme": "dark",
+                                "isTransparent": false
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+                            {
+                                "width": "550",
+                                "height": "320",
+                                "symbol": "BINANCE:XRPUSDT.P",
+                                "interval": "D",
+                                "timezone": "Etc/UTC",
+                                "theme": "dark",
+                                "style": "1",
+                                "locale": "en",
+                                "allow_symbol_change": true,
+                                "calendar": false,
+                                "support_host": "https://www.tradingview.com"
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-financials.js" async>
+                            {
+                                "isTransparent": true,
+                                "largeChartUrl": "",
+                                "displayMode": "regular",
+                                "width": "550",
+                                "height": "320",
+                                "colorTheme": "dark",
+                                "symbol": "BINANCE:XRPUSDT.P",
+                                "locale": "en"
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                </div>
+                <div class="right-popup">
+                    <div class="right-popup-header">
+                        <h1>Place Order</h1>
+                        <button onclick="closePopup('popupXRP')" class="close-popup">X</button>
+                    </div>
+                    <form id="transactionForm" class="transaction-form">
+                        <label for="price">Price:</label>
+                        <input type="number" id="price" name="price" required oninput="updateTotal()"><br><br>
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" name="quantity" required oninput="updateTotal()"><br><br>
+                        <div id="calculations">
+                            <p>Total Price: <span id="totalPrice">0</span></p>
+                            <p>Balance: <span id="balance">0.00</span></p>
+                        </div>
+                        <div class="form-button">
+                            <button class="buy-button" id="buyBtn" type="button">Buy</button>
+                            <button class="sell-button" id="sellBtn" type="button">Sell</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="popupICP" class="popup" data-crypto="ICP">
+            <div class="spliting">
+                <div class="left-popup">
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js" async>
+                            {
+                                "symbol": "BINANCE:ICPUSDT.P",
+                                "width": "550",
+                                "locale": "en",
+                                "colorTheme": "dark",
+                                "isTransparent": false
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+                            {
+                                "width": "550",
+                                "height": "320",
+                                "symbol": "BINANCE:ICPUSDT.P",
+                                "interval": "D",
+                                "timezone": "Etc/UTC",
+                                "theme": "dark",
+                                "style": "1",
+                                "locale": "en",
+                                "allow_symbol_change": true,
+                                "calendar": false,
+                                "support_host": "https://www.tradingview.com"
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-financials.js" async>
+                            {
+                                "isTransparent": true,
+                                "largeChartUrl": "",
+                                "displayMode": "regular",
+                                "width": "550",
+                                "height": "320",
+                                "colorTheme": "dark",
+                                "symbol": "BINANCE:ICPUSDT.P",
+                                "locale": "en"
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                </div>
+                <div class="right-popup">
+                    <div class="right-popup-header">
+                        <h1>Place Order</h1>
+                        <button onclick="closePopup('popupICP')" class="close-popup">X</button>
+                    </div>
+                    <form id="transactionForm" class="transaction-form">
+                        <label for="price">Price:</label>
+                        <input type="number" id="price" name="price" required oninput="updateTotal()"><br><br>
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" name="quantity" required oninput="updateTotal()"><br><br>
+                        <div id="calculations">
+                            <p>Total Price: <span id="totalPrice">0</span></p>
+                            <p>Balance: <span id="balance">0.00</span></p>
+                        </div>
+                        <div class="form-button">
+                            <button class="buy-button" id="buyBtn" type="button">Buy</button>
+                            <button class="sell-button" id="sellBtn" type="button">Sell</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="popupBNB" class="popup" data-crypto="BNB">
+            <div class="spliting">
+                <div class="left-popup">
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js" async>
+                            {
+                                "symbol": "BINANCE:BNBUSDT.P",
+                                "width": "550",
+                                "locale": "en",
+                                "colorTheme": "dark",
+                                "isTransparent": false
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+                            {
+                                "width": "550",
+                                "height": "320",
+                                "symbol": "BINANCE:BNBUSDT.P",
+                                "interval": "D",
+                                "timezone": "Etc/UTC",
+                                "theme": "dark",
+                                "style": "1",
+                                "locale": "en",
+                                "allow_symbol_change": true,
+                                "calendar": false,
+                                "support_host": "https://www.tradingview.com"
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-financials.js" async>
+                            {
+                                "isTransparent": true,
+                                "largeChartUrl": "",
+                                "displayMode": "regular",
+                                "width": "550",
+                                "height": "320",
+                                "colorTheme": "dark",
+                                "symbol": "BINANCE:BNBUSDT.P",
+                                "locale": "en"
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                </div>
+                <div class="right-popup">
+                    <div class="right-popup-header">
+                        <h1>Place Order</h1>
+                        <button onclick="closePopup('popupBNB')" class="close-popup">X</button>
+                    </div>
+                    <form id="transactionForm" class="transaction-form">
+                        <label for="price">Price:</label>
+                        <input type="number" id="price" name="price" required oninput="updateTotal()"><br><br>
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" name="quantity" required oninput="updateTotal()"><br><br>
+                        <div id="calculations">
+                            <p>Total Price: <span id="totalPrice">0</span></p>
+                            <p>Balance: <span id="balance">0.00</span></p>
+                        </div>
+                        <div class="form-button">
+                            <button class="buy-button" id="buyBtn" type="button">Buy</button>
+                            <button class="sell-button" id="sellBtn" type="button">Sell</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="popupApple" class="popup" data-crypto="AAPL">
+            <div class="spliting">
+                <div class="left-popup">
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js" async>
+                            {
+                                "symbol": "NASDAQ:AAPL",
+                                "width": "550",
+                                "locale": "en",
+                                "colorTheme": "dark",
+                                "isTransparent": false
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+                            {
+                                "width": "550",
+                                "height": "320",
+                                "symbol": "NASDAQ:AAPL",
+                                "interval": "D",
+                                "timezone": "Etc/UTC",
+                                "theme": "dark",
+                                "style": "1",
+                                "locale": "en",
+                                "allow_symbol_change": true,
+                                "calendar": false,
+                                "support_host": "https://www.tradingview.com"
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-financials.js" async>
+                            {
+                                "isTransparent": true,
+                                "largeChartUrl": "",
+                                "displayMode": "regular",
+                                "width": "550",
+                                "height": "320",
+                                "colorTheme": "dark",
+                                "symbol": "NASDAQ:AAPL",
+                                "locale": "en"
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                </div>
+                <div class="right-popup">
+                    <div class="right-popup-header">
+                        <h1>Place Order</h1>
+                        <button onclick="closePopup('popupApple')" class="close-popup">X</button>
+                    </div>
+                    <form id="transactionForm" class="transaction-form">
+                        <label for="price">Price:</label>
+                        <input type="number" id="price" name="price" required oninput="updateTotal()"><br><br>
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" name="quantity" required oninput="updateTotal()"><br><br>
+                        <div id="calculations">
+                            <p>Total Price: <span id="totalPrice">0</span></p>
+                            <p>Balance: <span id="balance">0.00</span></p>
+                        </div>
+                        <div class="form-button">
+                            <button class="buy-button" id="buyBtn" type="button">Buy</button>
+                            <button class="sell-button" id="sellBtn" type="button">Sell</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="popupTesla" class="popup" data-crypto="TLSA">
+            <div class="spliting">
+                <div class="left-popup">
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js" async>
+                            {
+                                "symbol": "NASDAQ:TSLA",
+                                "width": "550",
+                                "locale": "en",
+                                "colorTheme": "dark",
+                                "isTransparent": false
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+                            {
+                                "width": "550",
+                                "height": "320",
+                                "symbol": "NASDAQ:TLSA",
+                                "interval": "D",
+                                "timezone": "Etc/UTC",
+                                "theme": "dark",
+                                "style": "1",
+                                "locale": "en",
+                                "allow_symbol_change": true,
+                                "calendar": false,
+                                "support_host": "https://www.tradingview.com"
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-financials.js" async>
+                            {
+                                "isTransparent": true,
+                                "largeChartUrl": "",
+                                "displayMode": "regular",
+                                "width": "550",
+                                "height": "320",
+                                "colorTheme": "dark",
+                                "symbol": "NASDAQ:TLSA",
+                                "locale": "en"
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                </div>
+                <div class="right-popup">
+                    <div class="right-popup-header">
+                        <h1>Place Order</h1>
+                        <button onclick="closePopup('popupTesla')" class="close-popup">X</button>
+                    </div>
+                    <form id="transactionForm" class="transaction-form">
+                        <label for="price">Price:</label>
+                        <input type="number" id="price" name="price" required oninput="updateTotal()"><br><br>
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" name="quantity" required oninput="updateTotal()"><br><br>
+                        <div id="calculations">
+                            <p>Total Price: <span id="totalPrice">0</span></p>
+                            <p>Balance: <span id="balance">0.00</span></p>
+                        </div>
+                        <div class="form-button">
+                            <button class="buy-button" id="buyBtn" type="button">Buy</button>
+                            <button class="sell-button" id="sellBtn" type="button">Sell</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="popupMicrosoft" class="popup" data-crypto="MSFT">
+            <div class="spliting">
+                <div class="left-popup">
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js" async>
+                            {
+                                "symbol": "NASDAQ:MSFT",
+                                "width": "550",
+                                "locale": "en",
+                                "colorTheme": "dark",
+                                "isTransparent": false
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+                            {
+                                "width": "550",
+                                "height": "320",
+                                "symbol": "NASDAQ:MSFT",
+                                "interval": "D",
+                                "timezone": "Etc/UTC",
+                                "theme": "dark",
+                                "style": "1",
+                                "locale": "en",
+                                "allow_symbol_change": true,
+                                "calendar": false,
+                                "support_host": "https://www.tradingview.com"
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-financials.js" async>
+                            {
+                                "isTransparent": true,
+                                "largeChartUrl": "",
+                                "displayMode": "regular",
+                                "width": "550",
+                                "height": "320",
+                                "colorTheme": "dark",
+                                "symbol": "NASDAQ:MSFT",
+                                "locale": "en"
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                </div>
+                <div class="right-popup">
+                    <div class="right-popup-header">
+                        <h1>Place Order</h1>
+                        <button onclick="closePopup('popupMicrosoft')" class="close-popup">X</button>
+                    </div>
+                    <form id="transactionForm" class="transaction-form">
+                        <label for="price">Price:</label>
+                        <input type="number" id="price" name="price" required oninput="updateTotal()"><br><br>
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" name="quantity" required oninput="updateTotal()"><br><br>
+                        <div id="calculations">
+                            <p>Total Price: <span id="totalPrice">0</span></p>
+                            <p>Balance: <span id="balance">0.00</span></p>
+                        </div>
+                        <div class="form-button">
+                            <button class="buy-button" id="buyBtn" type="button">Buy</button>
+                            <button class="sell-button" id="sellBtn" type="button">Sell</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="popupMicrostrategy" class="popup" data-crypto="MSTR">
+            <div class="spliting">
+                <div class="left-popup">
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js" async>
+                            {
+                                "symbol": "NASDAQ:MSTR",
+                                "width": "550",
+                                "locale": "en",
+                                "colorTheme": "dark",
+                                "isTransparent": false
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+                            {
+                                "width": "550",
+                                "height": "320",
+                                "symbol": "NASDAQ:MSTR",
+                                "interval": "D",
+                                "timezone": "Etc/UTC",
+                                "theme": "dark",
+                                "style": "1",
+                                "locale": "en",
+                                "allow_symbol_change": true,
+                                "calendar": false,
+                                "support_host": "https://www.tradingview.com"
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-financials.js" async>
+                            {
+                                "isTransparent": true,
+                                "largeChartUrl": "",
+                                "displayMode": "regular",
+                                "width": "550",
+                                "height": "320",
+                                "colorTheme": "dark",
+                                "symbol": "NASDAQ:MSTR",
+                                "locale": "en"
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                </div>
+                <div class="right-popup">
+                    <div class="right-popup-header">
+                        <h1>Place Order</h1>
+                        <button onclick="closePopup('popupMicrostrategy')" class="close-popup">X</button>
+                    </div>
+                    <form id="transactionForm" class="transaction-form">
+                        <label for="price">Price:</label>
+                        <input type="number" id="price" name="price" required oninput="updateTotal()"><br><br>
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" name="quantity" required oninput="updateTotal()"><br><br>
+                        <div id="calculations">
+                            <p>Total Price: <span id="totalPrice">0</span></p>
+                            <p>Balance: <span id="balance">0.00</span></p>
+                        </div>
+                        <div class="form-button">
+                            <button class="buy-button" id="buyBtn" type="button">Buy</button>
+                            <button class="sell-button" id="sellBtn" type="button">Sell</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="popupMeta" class="popup" data-crypto="META">
+            <div class="spliting">
+                <div class="left-popup">
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js" async>
+                            {
+                                "symbol": "NASDAQ:META",
+                                "width": "550",
+                                "locale": "en",
+                                "colorTheme": "dark",
+                                "isTransparent": false
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+                            {
+                                "width": "550",
+                                "height": "320",
+                                "symbol": "NASDAQ:META",
+                                "interval": "D",
+                                "timezone": "Etc/UTC",
+                                "theme": "dark",
+                                "style": "1",
+                                "locale": "en",
+                                "allow_symbol_change": true,
+                                "calendar": false,
+                                "support_host": "https://www.tradingview.com"
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-financials.js" async>
+                            {
+                                "isTransparent": true,
+                                "largeChartUrl": "",
+                                "displayMode": "regular",
+                                "width": "550",
+                                "height": "320",
+                                "colorTheme": "dark",
+                                "symbol": "NASDAQ:META",
+                                "locale": "en"
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                </div>
+                <div class="right-popup">
+                    <div class="right-popup-header">
+                        <h1>Place Order</h1>
+                        <button onclick="closePopup('popupMeta')" class="close-popup">X</button>
+                    </div>
+                    <form id="transactionForm" class="transaction-form">
+                        <label for="price">Price:</label>
+                        <input type="number" id="price" name="price" required oninput="updateTotal()"><br><br>
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" name="quantity" required oninput="updateTotal()"><br><br>
+                        <div id="calculations">
+                            <p>Total Price: <span id="totalPrice">0</span></p>
+                            <p>Balance: <span id="balance">0.00</span></p>
+                        </div>
+                        <div class="form-button">
+                            <button class="buy-button" id="buyBtn" type="button">Buy</button>
+                            <button class="sell-button" id="sellBtn" type="button">Sell</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="popupNvidia" class="popup" data-crypto="NVDA">
+            <div class="spliting">
+                <div class="left-popup">
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js" async>
+                            {
+                                "symbol": "NASDAQ:NVDA",
+                                "width": "550",
+                                "locale": "en",
+                                "colorTheme": "dark",
+                                "isTransparent": false
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+                            {
+                                "width": "550",
+                                "height": "320",
+                                "symbol": "NASDAQ:NVDA",
+                                "interval": "D",
+                                "timezone": "Etc/UTC",
+                                "theme": "dark",
+                                "style": "1",
+                                "locale": "en",
+                                "allow_symbol_change": true,
+                                "calendar": false,
+                                "support_host": "https://www.tradingview.com"
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-financials.js" async>
+                            {
+                                "isTransparent": true,
+                                "largeChartUrl": "",
+                                "displayMode": "regular",
+                                "width": "550",
+                                "height": "320",
+                                "colorTheme": "dark",
+                                "symbol": "NASDAQ:NVDA",
+                                "locale": "en"
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                </div>
+                <div class="right-popup">
+                    <div class="right-popup-header">
+                        <h1>Place Order</h1>
+                        <button onclick="closePopup('popupNvidia')" class="close-popup">X</button>
+                    </div>
+                    <form id="transactionForm" class="transaction-form">
+                        <label for="price">Price:</label>
+                        <input type="number" id="price" name="price" required oninput="updateTotal()"><br><br>
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" name="quantity" required oninput="updateTotal()"><br><br>
+                        <div id="calculations">
+                            <p>Total Price: <span id="totalPrice">0</span></p>
+                            <p>Balance: <span id="balance">0.00</span></p>
+                        </div>
+                        <div class="form-button">
+                            <button class="buy-button" id="buyBtn" type="button">Buy</button>
+                            <button class="sell-button" id="sellBtn" type="button">Sell</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="popupGold" class="popup" data-crypto="GOLD">
+            <div class="spliting">
+                <div class="left-popup">
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js" async>
+                            {
+                                "symbol": "CAPITALCOM:GOLD",
+                                "width": "550",
+                                "locale": "en",
+                                "colorTheme": "dark",
+                                "isTransparent": false
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+                            {
+                                "width": "550",
+                                "height": "320",
+                                "symbol": "CAPITALCOM:GOLD",
+                                "interval": "D",
+                                "timezone": "Etc/UTC",
+                                "theme": "dark",
+                                "style": "1",
+                                "locale": "en",
+                                "allow_symbol_change": true,
+                                "calendar": false,
+                                "support_host": "https://www.tradingview.com"
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-financials.js" async>
+                            {
+                                "isTransparent": true,
+                                "largeChartUrl": "",
+                                "displayMode": "regular",
+                                "width": "550",
+                                "height": "320",
+                                "colorTheme": "dark",
+                                "symbol": "CAPITALCOM:GOLD",
+                                "locale": "en"
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                </div>
+                <div class="right-popup">
+                    <div class="right-popup-header">
+                        <h1>Place Order</h1>
+                        <button onclick="closePopup('popupGold')" class="close-popup">X</button>
+                    </div>
+                    <form id="transactionForm" class="transaction-form">
+                        <label for="price">Price:</label>
+                        <input type="number" id="price" name="price" required oninput="updateTotal()"><br><br>
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" name="quantity" required oninput="updateTotal()"><br><br>
+                        <div id="calculations">
+                            <p>Total Price: <span id="totalPrice">0</span></p>
+                            <p>Balance: <span id="balance">0.00</span></p>
+                        </div>
+                        <div class="form-button">
+                            <button class="buy-button" id="buyBtn" type="button">Buy</button>
+                            <button class="sell-button" id="sellBtn" type="button">Sell</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="popupSilver" class="popup" data-crypto="SILVER">
+            <div class="spliting">
+                <div class="left-popup">
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js" async>
+                            {
+                                "symbol": "CAPITALCOM:SILVER",
+                                "width": "550",
+                                "locale": "en",
+                                "colorTheme": "dark",
+                                "isTransparent": false
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+                            {
+                                "width": "550",
+                                "height": "320",
+                                "symbol": "CAPITALCOM:SILVER",
+                                "interval": "D",
+                                "timezone": "Etc/UTC",
+                                "theme": "dark",
+                                "style": "1",
+                                "locale": "en",
+                                "allow_symbol_change": true,
+                                "calendar": false,
+                                "support_host": "https://www.tradingview.com"
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-financials.js" async>
+                            {
+                                "isTransparent": true,
+                                "largeChartUrl": "",
+                                "displayMode": "regular",
+                                "width": "550",
+                                "height": "320",
+                                "colorTheme": "dark",
+                                "symbol": "CAPITALCOM:SILVER",
+                                "locale": "en"
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                </div>
+                <div class="right-popup">
+                    <div class="right-popup-header">
+                        <h1>Place Order</h1>
+                        <button onclick="closePopup('popupSilver')" class="close-popup">X</button>
+                    </div>
+                    <form id="transactionForm" class="transaction-form">
+                        <label for="price">Price:</label>
+                        <input type="number" id="price" name="price" required oninput="updateTotal()"><br><br>
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" name="quantity" required oninput="updateTotal()"><br><br>
+                        <div id="calculations">
+                            <p>Total Price: <span id="totalPrice">0</span></p>
+                            <p>Balance: <span id="balance">0.00</span></p>
+                        </div>
+                        <div class="form-button">
+                            <button class="buy-button" id="buyBtn" type="button">Buy</button>
+                            <button class="sell-button" id="sellBtn" type="button">Sell</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="popupCopper" class="popup" data-crypto="COPPER">
+            <div class="spliting">
+                <div class="left-popup">
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js" async>
+                            {
+                                "symbol": "CAPITALCOM:COPPER",
+                                "width": "550",
+                                "locale": "en",
+                                "colorTheme": "dark",
+                                "isTransparent": false
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+                            {
+                                "width": "550",
+                                "height": "320",
+                                "symbol": "CAPITALCOM:COPPER",
+                                "interval": "D",
+                                "timezone": "Etc/UTC",
+                                "theme": "dark",
+                                "style": "1",
+                                "locale": "en",
+                                "allow_symbol_change": true,
+                                "calendar": false,
+                                "support_host": "https://www.tradingview.com"
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-financials.js" async>
+                            {
+                                "isTransparent": true,
+                                "largeChartUrl": "",
+                                "displayMode": "regular",
+                                "width": "550",
+                                "height": "320",
+                                "colorTheme": "dark",
+                                "symbol": "CAPITALCOM:COPPER",
+                                "locale": "en"
+                            }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                </div>
+                <div class="right-popup">
+                    <div class="right-popup-header">
+                        <h1>Place Order</h1>
+                        <button onclick="closePopup('popupCopper')" class="close-popup">X</button>
+                    </div>
+                    <form id="transactionForm" class="transaction-form">
+                        <label for="price">Price:</label>
+                        <input type="number" id="price" name="price" required oninput="updateTotal()"><br><br>
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" name="quantity" required oninput="updateTotal()"><br><br>
+                        <div id="calculations">
+                            <p>Total Price: <span id="totalPrice">0</span></p>
+                            <p>Balance: <span id="balance">0.00</span></p>
+                        </div>
+                        <div class="form-button">
+                            <button class="buy-button" id="buyBtn" type="button">Buy</button>
+                            <button class="sell-button" id="sellBtn" type="button">Sell</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="common.js"></script>
+    <script src="product-tab.js"></script>
+    <script src="product-popup.js"></script>
+</body>
+</html>
